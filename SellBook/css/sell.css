@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    /* z-index: 2000; */
 }
 
 body {
     height: 100%;
     margin: 0;
+    /* background: #060817; */
+}
+
+#container{
     background: #060817;
 }
 
@@ -78,6 +81,7 @@ body {
     height: 100vh;
     background-color: black;
     border: 1px solid #D80286;
+    z-index: 5;
 }
 
 #left-menu-closer {
@@ -127,56 +131,61 @@ body {
 }
 
 #head {
-    margin-top: -1.3em;
-    margin-left: 4em;
+    margin-top: -1.8em;
+    margin-left: 4.5em;
     color: white;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-#main {
-    margin-top: 1.5em;
-    margin-left: 5em;
-    color: white;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: small;
+.col-10{
+    margin-left: 3.5em;
 }
 
-.products {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+#title-error{
+    color: #D80286;
+    visibility: hidden;
 }
 
-.image-container {
+#category-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+#price-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+#sellername-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+#sellermail-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+#address-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+#postal-error{
+    color: #D80286;
+    visibility: hidden;
+}
+
+.box{
+    border-style:ridge;
+    padding: 1em;
     margin-top: 1em;
-    margin-left: 4em;
-    border: 1px solid black;
-    width: 28vw;
-    border-radius: 0px;
-    display: inline-block;
-    box-shadow: inset 0 0 0 0 black;
-    cursor: pointer;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-}
-
-.image-container:hover {
-    box-shadow: inset 400px 0 0 0 #D80286;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* .partners {
     color: white;
-} */
-
+    font-size: small;
+    font-family: "Lucida Console", Monaco, monospace;
+    border-color: #D80286;
+    background-color: #151725;
+}
 
 footer {
     margin-top: 1em;
@@ -247,12 +256,8 @@ footer {
         width: 25vw;
     }
 
-    .button-slide {
-        margin-left: 87vw;
-    }
-
-    .image-container {
-        width: 20vw;
+    .button-slide{
+        margin-left: 53.2em;
     }
 
     footer {
@@ -275,12 +280,27 @@ footer {
     .social-links {
         font-size: 150%;
     }
+
+    .col-10{
+        margin-left: 4em;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #side-menu {
         width: 70px;
+    }
+
+    .button-slide {
+        margin-left: 63.6em;
+        margin-right: 1em;
+        border: 2px solid rgb(216, 2, 134);
+        border-radius: 0px;
+        padding: 18px 36px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        cursor: pointer;
     }
 
     #name {
@@ -300,10 +320,6 @@ footer {
         font-size: x-large;
     }
 
-    #main {
-        font-size: larger;
-    }
-
     .index {
         font-size: x-large;
         margin-left: 0.5em;
@@ -312,16 +328,6 @@ footer {
     #contents {
         font-size: larger;
         margin-left: 2.5em;
-    }
-
-    .button-slide {
-        margin-right: 1em;
-        border: 2px solid rgb(216, 2, 134);
-        border-radius: 0px;
-        padding: 18px 36px;
-        font-size: 20px;
-        letter-spacing: 1px;
-        cursor: pointer;
     }
 
     footer {
@@ -346,5 +352,24 @@ footer {
 
     .social-links {
         font-size: 210%;
+    }
+    
+    .left-side{
+        border-style:ridge;
+        padding: 1em;
+        margin-top: 1em;
+        color: white;
+        font-size: small;
+        font-family: "Lucida Console", Monaco, monospace;
+        border-color: #D80286;
+        background-color: #151725;
+    }
+    
+    .col-10{
+        margin-left: 7em;
+    }
+
+    .box{
+        font-size: large;
     }
 }
