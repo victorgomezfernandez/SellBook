@@ -5,7 +5,7 @@ SellBook is a marketplace for books, with the objective of giving a second chanc
 
 ## Content
 
-The project consists for the moment of a HTML document (index.html), a CSS document (styles.css) and a JavaScript document (left-menu.js). For the second task a second HTML document (sell.html), CSS (sell.css) and JavaScript (sell-list.js) were added.
+The project consists for the moment of a HTML document (index.html), a CSS document (styles.css) and a JavaScript document (left-menu.js). For the second task a second HTML document (sell.html), CSS (sell.css) and JavaScript (sell-list.js) were added. Lastly, for the third task a third HTML document (buy.html), CSS (buy.css) and JavaScript (import-products.js) were added.
 
 
 ## Important elements of the Task 1
@@ -86,9 +86,93 @@ function deleteBook(bookId){
 }
 ```
 
+## Important Elements of the Task 3
+
+The objective of this task was to integrate localStorage code to the page, using the form included in the last task to save data and show it in the buy.html page. To make this possible the VisualStudio extension LiveServer is necessary, as the localStorage is shared bewteen different pages from the same domain.
+
+### The container from the buy.html page that stores the data:
+```html
+</div>
+    <div id="buyable">
+
+    </div>
+</div>
+```
+
+### The section of the buy.css document that gives format to the stored data:
+```css
+.sale-list {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#buyable {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin-top: 1em;
+    border: 3px solid #D80286;
+    padding: 1em;
+    width: 50vw;
+    color: white;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: small;
+    display: inline-block;
+}
+```
+
+### The code used to store the data from the sell.html form
+```javascript
+const booksInStringFormat = JSON.stringify(books);
+window.localStorage.setItem("books", booksInStringFormat);
+showBooks();
+```
+
+### The code used to get the data and use it in the buy.html page
+```javascript
+let products = [
+
+];
+
+function initialize() {
+    const booksInStringFormat = window.localStorage.getItem("books");
+    let books = JSON.parse(booksInStringFormat);
+    const BUYABLE = document.getElementById("buyable");
+    let products = "";
+    for (let i = 0; i < books.length; i++) {
+        products +=
+        `
+        <div class="product">
+            <ul class="book">
+                <li class="item"><span>${books[i].title}, ${books[i].category} by ${books[i].author} for ${books[i].price}€</span>
+                <br>
+                    <input type="number" id="quantity" name="quantity" min="0" max="5">
+                    <br>
+                    <span class="add-to-chart slide-right">ADD TO CART</span>
+                    </li>
+            </ul>
+        </div>
+        
+        `
+    }
+
+    BUYABLE.innerHTML = products;
+}
+
+initialize();
+```
+
 ## Gratitudes:
 
-I have used the next [web page](https://dribbble.com/shots/22892019-DeFi-Coin-Web-3-0-Platform) as inspiration for the design. I have also been helped by my classmate Alejandro Abreu in the ":hover" function or some design choices (for example).
+I have used the next [web page](https://dribbble.com/shots/22892019-DeFi-Coin-Web-3-0-Platform) as inspiration for the design. I have also been helped by my classmate Alejandro Abreu in the ":hover" function or some design choices. For the last task I have received much help from Tiburcio, and I could not have finished the task without this help.
 
 ## Authors
 
