@@ -6,10 +6,9 @@
 body {
     height: 100%;
     margin: 0;
-    /* background: #060817; */
 }
 
-#container{
+#container {
     background: #060817;
 }
 
@@ -137,47 +136,52 @@ body {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.col-10{
+.col-10 {
     margin-left: 3.5em;
 }
 
-#title-error{
+#title-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#category-error{
+#category-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#price-error{
+#author-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#sellername-error{
+#price-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#sellermail-error{
+#sellername-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#address-error{
+#sellermail-error {
     color: #D80286;
     visibility: hidden;
 }
 
-#postal-error{
+#address-error {
     color: #D80286;
     visibility: hidden;
 }
 
-.box{
-    border-style:ridge;
+#postal-error {
+    color: #D80286;
+    visibility: hidden;
+}
+
+.box {
+    border-style: ridge;
     padding: 1em;
     margin-top: 1em;
     color: white;
@@ -256,14 +260,14 @@ footer {
         width: 25vw;
     }
 
-    .button-slide{
+    .button-slide {
         margin-left: 53.2em;
     }
 
     footer {
         height: 75px;
     }
-    
+
     #logo {
         height: 70%;
         visibility: visible;
@@ -281,7 +285,7 @@ footer {
         font-size: 150%;
     }
 
-    .col-10{
+    .col-10 {
         margin-left: 4em;
     }
 }
@@ -353,9 +357,9 @@ footer {
     .social-links {
         font-size: 210%;
     }
-    
-    .left-side{
-        border-style:ridge;
+
+    .left-side {
+        border-style: ridge;
         padding: 1em;
         margin-top: 1em;
         color: white;
@@ -364,12 +368,12 @@ footer {
         border-color: #D80286;
         background-color: #151725;
     }
-    
-    .col-10{
+
+    .col-10 {
         margin-left: 7em;
     }
 
-    .box{
+    .box {
         font-size: large;
     }
 }

@@ -17,12 +17,15 @@
             </div>
             <div id="left-menu">
                 <i class="fa-solid fa-x" id="left-menu-closer"></i>
-                <span class="index">Index</span>
+                <a href="index.html"><span class="index">Index</span></a>
                 <div id="contents">
                     <div>
-                        <p class="link">Buy</p>
-                        <a href="sell.html"><p class="link">Sell</p></a>
-                        <p class="link">Trade</p>
+                        <a href="buy.html">
+                            <p class="link">Buy</p>
+                        </a>
+                        <a href="sell.html">
+                            <p class="link">Sell</p>
+                        </a>
                         <p class="link">Our partners</p>
                         <p class="link">Support</p>
                     </div>
@@ -45,7 +48,7 @@
             </div>
             <div class="col-10">
                 <div class="box">
-                    <form action="sell.html" id="sell-form">
+                    <form action="buy.html" id="sell-form">
                         <div class="form-floating mb-3 mt-3">
                             <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
                             <label for="title" class="form-label">Title:</label>
@@ -62,8 +65,14 @@
                             <label for="category" class="form-label">Category(select one):</label>
                             <p id="category-error">*Category cannot be empty</p>
                         </div>
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="text" class="form-control" id="author" placeholder="Enter author name"
+                                name="author">
+                            <label for="author" class="form-label">Author:</label>
+                            <span id="author-error">*Author cannot be empty</span>
+                        </div>
                         <div class="input-group mt-3">
-                            <input type="text" class="form-control" name ="price" placeholder="Price">
+                            <input type="text" class="form-control" name="price" placeholder="Price">
                             <span class="input-group-text">€</span>
                             <span id="price-error">*Price cannot be empty</span>
                         </div>
@@ -74,7 +83,7 @@
                             <span id="sellername-error">*Name cannot be empty</span>
                         </div>
                         <div class="form-floating mb-3 mt-3">
-                            <input type="seller-mail" class="form-control" id="sellermail" placeholder="E-Mail"
+                            <input type="text" class="form-control" id="sellermail" placeholder="E-Mail"
                                 name="sellermail">
                             <label for="sellermail" class="form-label">Your E-Mail:</label>
                             <span id="sellermail-error">*E-Mail cannot be empty</span>
@@ -90,8 +99,7 @@
                             <button class="check-postal" type="submit">Check</button>
                         </div> -->
                         <div class="form-floating mb-3 mt-3">
-                            <input type="text" class="form-control" id="postal" placeholder="Postal Code"
-                                name="postal">
+                            <input type="text" class="form-control" id="postal" placeholder="Postal Code" name="postal">
                             <label for="postal" class="form-label">Postal Code:</label>
                             <span id="postal-error">*Postal Code cannot be empty</span>
                         </div>
@@ -125,7 +133,7 @@
                 <div class="box">
                     <p>Your books on sale</p>
                     <ul id="sell-list">
-
+                        
                     </ul>
                 </div>
             </div>
